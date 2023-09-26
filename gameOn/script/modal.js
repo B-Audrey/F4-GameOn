@@ -36,19 +36,8 @@ const closeModal = () => {
     validationMessage.style.display = "none";
 }
 
-// on submit display message, close btn and hide the form
-const sendSubmitMessage = () => {
-    formData.forEach((e) => e.style.display = "none");
-    submitBtn.style.display = "none";
-    modalCloseBtn.style.display = "block";
-    validationMessage.style.display = "flex";
-}
 
 // launch modal event, reacting when modal is opening or closing
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 modalCloseX.addEventListener("click", closeModal);
-modalCloseBtn.addEventListener("click", closeModal)
-submitBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    sendSubmitMessage()
-})
+modalCloseBtn.addEventListener("click", closeModal);
