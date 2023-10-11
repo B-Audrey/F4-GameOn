@@ -8,20 +8,27 @@ function editNav() {
 }
 
 // DOM Elements
-const modalbg = document.querySelector(".bground");
+export const submitBtn = document.querySelector('.btn-submit');
+export const formData = document.querySelectorAll(".formData");
+export const modalCloseBtn = document.querySelector(".btn-close");
+export const validationMessage = document.querySelector(".validation-message");
+export const formContent = document.getElementById("formContent");
+export const errorTags = document.querySelectorAll(".formData p");
+const modalBackground = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
-const formData = document.querySelectorAll(".formData");
 const modalCloseX = document.querySelector(".close");
 const mainContent = document.querySelector(".hero-section");
-const submitBtn = document.querySelector('.btn-submit');
-const modalCloseBtn = document.querySelector(".btn-close");
-const validationMessage = document.querySelector(".validation-message");
 
 
 // launch modal form
-// display the white background and hide the back content
+// empty fields and error style messages
+// display the white background and hide the back content to keep form only
 const launchModal = () => {
-    modalbg.style.display = "block";
+    formContent.querySelectorAll("input:not([type='submit']):not([type='button'])").forEach((e) => e.value = null);
+    formContent.querySelectorAll('input').forEach((e) => e.className = e.className.split(' ')[0] )
+    errorTags.forEach((e) => e.innerText = "")
+
+    modalBackground.style.display = "block";
     mainContent.style.opacity = "0";
     modalCloseBtn.style.display = "none";
     submitBtn.style.display = "block";
@@ -31,7 +38,7 @@ const launchModal = () => {
 //close modal event
 // reverse the opening function
 const closeModal = () => {
-    modalbg.style.display = "none";
+    modalBackground.style.display = "none";
     mainContent.style.opacity = "1";
     validationMessage.style.display = "none";
 }

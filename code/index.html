@@ -4,15 +4,13 @@
     <meta charset="utf-8"/>
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <link rel="stylesheet" href="assets/modal.css"/>
+    <link rel="stylesheet" href="assets/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet"/>
 </head>
 <body>
 <div class="topnav" id="myTopnav">
-    <div class="header-logo">
-        <img alt="logo" src="assets/Logo.png"/>
-    </div>
+        <img class="header-logo" alt="logo" src="assets/Logo.png"/>
     <div class="main-navbar">
         <a href="#" class="active">
             <span>Détails de l'évènement</span>
@@ -59,7 +57,6 @@
                         action="index.html"
                         method="get"
                         id="formContent">
-<!--                        onsubmit="return validate();"-->
                     <div class="formData">
                         <label for="first">Prénom</label><br>
                         <input
@@ -68,7 +65,7 @@
                                 id="first"
                                 name="first"
                                 minlength="2"
-                        /><p></p><br>
+                        /><p></p>
                     </div>
                     <div class="formData">
                         <label for="last">Nom</label><br>
@@ -77,7 +74,7 @@
                                 type="text"
                                 id="last"
                                 name="last"
-                        /><p></p><br>
+                        /><p></p>
                     </div>
                     <div class="formData">
                         <label for="email">E-mail</label><br>
@@ -86,7 +83,7 @@
                                 type="email"
                                 id="email"
                                 name="email"
-                        /><p></p><br>
+                        /><p></p>
                     </div>
                     <div class="formData">
                         <label for="birthdate">Date de naissance</label><br>
@@ -97,7 +94,6 @@
                                 name="birthdate"
                         />
                         <p></p>
-                        <br>
                     </div>
                     <div class="formData">
                         <label class="text-label" for="quantity">À combien de tournois GameOn avez-vous déjà participé
@@ -110,8 +106,9 @@
                                 min="0"
                                 max="99"
                         />
+                        <p></p>
                     </div>
-                    <div class="formData">
+                    <div class="formData" id="locations">
                         <span class="text-label">A quel tournoi souhaitez-vous participer cette année ?</span>
                         <input
                                 class="checkbox-input location"
@@ -167,10 +164,6 @@
                             <span class="checkbox-icon"></span>
                             Boston
                         </label>
-                        <label class="checkbox-label" for="location6">
-                            <span class="checkbox-icon"></span>
-                            Portland
-                        </label>
                         <input
                                 class="checkbox-input location"
                                 type="radio"
@@ -178,6 +171,10 @@
                                 name="location"
                                 value="Portland"
                         />
+                        <label class="checkbox-label" for="location6">
+                            <span class="checkbox-icon"></span>
+                            Portland
+                        </label>
                         <p></p>
                     </div>
 
@@ -186,6 +183,7 @@
                                 class="checkbox-input confirmation"
                                 type="checkbox"
                                 id="checkbox1"
+                                name="terms"
                                 checked
                         />
                         <label class="checkbox2-label" for="checkbox1">
@@ -196,6 +194,7 @@
                                 class="checkbox-input alert"
                                 type="checkbox"
                                 id="checkbox2"
+                                name="newsletter"
                         />
                         <label class="checkbox2-label" for="checkbox2">
                             <span class="checkbox-icon"></span>
@@ -203,6 +202,8 @@
                         </label>
                         <p></p>
                     </div>
+
+
                     <div class="validation-message">
                         <p>Merci pour votre inscription</p>
                     </div>
