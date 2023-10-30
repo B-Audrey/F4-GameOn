@@ -7,7 +7,6 @@ const termsErrorMessage = 'Vous devez accepter les termes et conditions';
 const birthErrorMessage = 'Vous date de naissance n\'est pas valide pour l\'inscription';
 const unknownErrorMessage = 'Votre forumlaire contient des données inappropriées. Veuillez recommencer la saisie.';
 const numberErrorMessage = 'Vous devez rensienger votre nombre de participation';
-
 const yearMax = new Date().getFullYear() - 18;
 const yearMin = new Date().getFullYear() - 99;
 
@@ -22,7 +21,6 @@ const controlData = () => {
         type: 'radio',
         locationsArray: [...document.querySelectorAll('#locations > input')]
     };
-    let hasMadeALocationChoice = false;
 
     const data = [...document.querySelectorAll('.formData input[type]:not([type="radio"])'), locations];
 

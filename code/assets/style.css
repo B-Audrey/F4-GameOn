@@ -1,5 +1,5 @@
 :root {
-    --font-default: "DM Sans", Arial, Helvetica, sans-serif;
+    --font-default: "DM Sans", Arial, Helvetica, "sans-serif";
     --font-slab: var(--font-default);
     --modal-duration: 0.8s;
 }
@@ -69,8 +69,6 @@ img {
     color: #ff0000;
     font-size: 1.5em;
 }
-
-
 
 
 main {
@@ -313,7 +311,7 @@ input {
 /* custom select styles */
 .custom-select {
     position: relative;
-    font-family: Arial sans-serif;
+    font-family: Arial, 'sans-serif';
     font-size: 1.1rem;
     font-weight: normal;
 }
@@ -468,10 +466,10 @@ input {
     padding: 15%;
     align-items: center;
     justify-content: center;
+}
 
-    & p {
-        text-align: center;
-    }
+.validation-message p {
+    text-align: center;
 }
 
 footer {
@@ -481,22 +479,13 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 1024px) {
 
     .header-logo {
         max-width: 25%;
     }
-    .topnav{
+
+    .topnav {
         box-sizing: border-box;
         width: 95%;
     }
@@ -554,15 +543,13 @@ footer {
 }
 
 
-
-
-
 @media screen and (max-width: 768px) {
 
     .header-logo {
         max-width: 40%;
     }
-    .topnav{
+
+    .topnav {
         z-index: 10;
         position: fixed;
         width: 100%;
@@ -570,9 +557,11 @@ footer {
         padding: 20px 5vw;
         background-color: white;
     }
-    main{
-        margin-top: 100px ;
+
+    main {
+        margin-top: 100px;
     }
+
     .topnav a {
         display: none;
     }
@@ -597,33 +586,16 @@ footer {
         display: block;
         text-align: left;
     }
-    .content{
+
+    .content {
         margin: 110px auto 0;
     }
-    .hero-section{
+
+    .hero-section {
         min-height: unset;
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media screen and (max-width: 540px) {
@@ -631,6 +603,7 @@ footer {
     .header-logo {
         max-width: 45%;
     }
+
     .topnav a {
         display: none;
     }
@@ -644,10 +617,12 @@ footer {
         font-size: 2rem;
         white-space: normal;
     }
+
     .hero-text {
         font-size: 1rem;
         margin-top: 30px;
     }
+
     .hero-img img {
         border-radius: 10px;
         margin-top: 30px;
@@ -655,9 +630,6 @@ footer {
 
 
 }
-
-
-
 
 
 @keyframes modalopen {
